@@ -1,10 +1,13 @@
-# 1.Algoritmo que pida dos números e indique si el primero es mayor que el segundo.
-
-valor1 = int(input("Indicame un primer valor: "))
-valor2 = int(input("Indicame un segundo valor: "))
-
-if valor1 > valor2:
-    print("El primer número es mayor que el segundo")
+try:
+    num1 = float(input("Ingresa el primer número: "))
+    num2 = float(input("Ingresa el segundo número: "))
+except ValueError:
+    print("Error: Ingresa solo números válidos.")
 else:
-    print("El segundo valor es mayor que el primero")
+    if num1 > num2:
+        print(f"El primer número ({num1}) es mayor que el segundo ({num2}).")
+    elif num2 > num1:
+        print(f"El segundo número ({num2}) es mayor que el primero ({num1}).")
+    else:
+        print("Ambos números son iguales.")
 

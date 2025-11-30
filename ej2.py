@@ -1,10 +1,11 @@
-# 2.Algoritmo que pida un número y diga si es positivo, negativo o 0.
-
-valor = int(input("Indicame un número: "))
-
-if valor > 0:
-    print(f"El número {valor} es psitivo")
-elif valor == 0:
-    print(f"El número {valor} es 0")
+try:
+    num = float(input("Ingresa un número: "))
+except ValueError:
+    print("Error: Ingresa un número válido.")
 else:
-    print(f"El número {valor} es negativo")
+    if num > 0:
+        print("El número es positivo.")
+    elif num < 0:
+        print("El número es negativo.")
+    else:
+        print("El número es cero (0).")
